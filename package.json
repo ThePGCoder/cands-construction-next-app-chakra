@@ -1,0 +1,32 @@
+{
+  "name": "thepgcoder-next-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "email": "email dev"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.10.6",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@fontsource/corinthia": "^5.1.1",
+    "@iconify/react": "^5.2.0",
+    "@react-email/components": "^0.0.33",
+    "framer-motion": "^12.4.7",
+    "next": "15.1.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "resend": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "react-email": "3.0.7",
+    "typescript": "^5"
+  }
+}
