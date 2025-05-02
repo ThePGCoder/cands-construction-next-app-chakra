@@ -92,7 +92,7 @@ const ImageSlider = () => {
           {/* Fading Caption */}
           <Box
             position="absolute"
-            bottom={48}
+            bottom={60}
             width="100%"
             zIndex={3}
             textAlign="center"
@@ -101,7 +101,7 @@ const ImageSlider = () => {
             transition="opacity 1s ease-in-out"
           >
             <Text
-              fontSize="6xl"
+              fontSize="5xl"
               fontWeight="bold"
               fontFamily="Cinzel Decorative"
             >
