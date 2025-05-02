@@ -5,28 +5,35 @@ export const navItemData: NavItemProps[] = [
         link: "/home",
     },
     {
-        title: "About Me",
-        icon: "mdi-account-circle",
-        link: "/about-me",
+        title: "About Us",
+        icon: "gridicons:info",
+        link: "/about-us",
+    },
+    {
+        title: "The Team",
+        icon: "fluent:people-team-16-filled",
+        link: "/the-team",
     },
  
     {
-        title: "Showcase",
-        icon: "tabler:world-www",
+        title: "Gallery",
+        icon: "ic:baseline-vrpano",
         
         dropdown: true,
         subMenu: [
-        {title: "Project Management", icon: "mdi:chart-gantt", link: "/showcase/project-management"}, 
-        {title: "Bathroom Cost Calculator", icon: "ri:money-dollar-circle-fill", link: "/showcase/bathroom-cost-calculator"}, 
-        {title: "CS Innovations", icon: "lets-icons:3d-box-fill", link: "/showcase/cs-innovations"},
-        {title: "Lux Car Detailing", icon: "mdi:car-side", link: "/showcase/lux-car-detailing"},
+        
         
         ] 
     },
     {
-        title: "Contact Me",
-        icon: "ri:mail-fill",
-        link: "/contact-me",
+        title: "Estimate My Job",
+        icon: "ri:money-dollar-circle-fill",
+        link: "/estimate-my-job",
+    },
+    {
+        title: "Contact Us",
+        icon: "mdi:email",
+        link: "/contact-us",
     },
     
     

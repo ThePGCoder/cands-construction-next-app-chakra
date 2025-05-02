@@ -1,10 +1,12 @@
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, Card, useColorModeValue } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 import {
   darkBorder,
   lightSurface,
   darkSurface,
   lightBorder,
+  lightShadow,
+  darkShadow,
 } from "../styles/constants";
 
 interface CustomCardProps {
@@ -14,15 +16,16 @@ interface CustomCardProps {
 const CustomCard: React.FC<CustomCardProps> = ({ children }) => {
   return (
     <>
-      <Box
+      <Card
         border="1px solid"
         borderRadius={4}
         borderColor={useColorModeValue(lightBorder, darkBorder)}
         p={4}
         bg={useColorModeValue(lightSurface, darkSurface)}
+        boxShadow="xl"
       >
         {children}
-      </Box>
+      </Card>
     </>
   );
 };

@@ -21,6 +21,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Sidebar />
       
         <Box
+        pt={50}
           ml={{ base: "none", sm: "none", md: 320 }}
           transition={"0.2s ease"}
           background={useColorModeValue(
@@ -29,7 +30,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           )}
           height="calc(100vh)"
           
-          px={8}
+          
         >
           {children}
         </Box>

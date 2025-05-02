@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
         width={{ base: "100%", sm: "100%", md: "calc(100% - 320px)" }}
         position="fixed"
         zIndex={1000}
-        bg={useColorModeValue("#e9e9e9", "#1a202c")}
+        backdropFilter="blur(10px)"
         height={50}
         display="flex"
         justifyContent={{
@@ -33,6 +33,7 @@ const Header: React.FC<HeaderProps> = ({ toggleDrawer }) => {
       >
         <Box display={{ md: "none" }}>
           <IconButton
+          variant="ghost"
             aria-label="drawer-button"
             onClick={toggleDrawer}
             size="sm"

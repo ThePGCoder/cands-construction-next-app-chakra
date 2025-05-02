@@ -24,6 +24,8 @@ const kronaOne = Krona_One({
 
 const signatureFont = localFont({ src: '../../public/fonts/signature_font.ttf' })
 
+const copperplate = localFont({ src: '../../public/fonts/OPTICopperplate-Light.otf' })
+
 
 const cinzelDecorative = Cinzel_Decorative({subsets: ["latin"], weight: ["400", "700"]})
 
@@ -42,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.className} ${inter.className} ${kronaOne.className} ${corinthia.className} ${cinzelDecorative.className} ${signatureFont.className}`}
+      className={`${inter.className} ${inter.className} ${kronaOne.className} ${corinthia.className} ${cinzelDecorative.className} ${signatureFont.className} ${copperplate.className}`}
     >
       <body>
         <Providers>{children}</Providers>

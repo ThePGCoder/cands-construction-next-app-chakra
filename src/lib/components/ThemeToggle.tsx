@@ -18,7 +18,7 @@ const ThemeToggle = () => {
 
   return (
     <>
-      <IconButton aria-label="theme-toggle" onClick={handleClick} size="sm"> 
+      <IconButton aria-label="theme-toggle" onClick={handleClick} size="sm" variant="ghost"> 
         {useColorModeValue(
           <Icon icon="oi:sun" height={20} />,
           <Icon icon="oi:moon" height={20} />

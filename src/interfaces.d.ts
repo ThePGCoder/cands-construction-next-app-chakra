@@ -9,6 +9,8 @@ interface NavItemProps {
     color?: string;
 }
 
-interface TemplatesProps {
-    
-}
+interface Slide {
+    url: string;
+    caption?: string; // Optional caption
+  }
+  
