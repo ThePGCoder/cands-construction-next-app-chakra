@@ -18,7 +18,7 @@ const CustomCard: React.FC<CustomCardProps> = ({ children }) => {
     <>
       <Card
         border="1px solid"
-        borderRadius={4}
+        borderRadius={6}
         borderColor={useColorModeValue(lightBorder, darkBorder)}
         p={4}
         bg={useColorModeValue(lightSurface, darkSurface)}

@@ -22,11 +22,11 @@ const Footer: React.FC<FooterProps> = () => {
         bg= {useColorModeValue(lightBG, darkBG)}
       >
         <Box display="flex" fontSize="0.75rem">
-          <Box color={primary}>&nbsp;&#123;</Box>
+          <Box color={"blue.400"}>&nbsp;&#123;</Box>
           <Box fontStyle="italic" fontFamily="corinthia">
             the
           </Box>
-          <Box fontWeight="bold" fontSize="0.75rem">PGCoder</Box><Box color={primary}>...&#125;</Box>
+          <Box fontWeight="bold" fontSize="0.75rem">PGCoder</Box><Box color="blue.400">...&#125;</Box>
         </Box>
       </Box>
     </>

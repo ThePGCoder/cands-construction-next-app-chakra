@@ -1,31 +1,19 @@
-"use client";
+"use client"
 
-import {
-  Box,
-  Card,
-  CardBody,
-  Text,
-  Center,
-  Heading,
-  Input,
-  InputGroup,
-  useColorModeValue,
-  VStack,
-  Textarea,
-  useToast,
-} from "@chakra-ui/react";
-import React, { useContext, useEffect, useState } from "react";
-import { Icon } from "@iconify/react";
-import CustomButton from "@/lib/components/CustomButton";
-import { ActiveRouteContext } from "@/lib/hooks/activeRouteContext";
-import { primary, secondary } from "@/lib/styles/constants";
-import FadeIn from "@/lib/components/FadeIn";
-import { submitEnquiry } from "./components/Post";
+import CustomButton from '@/lib/components/CustomButton';
+import FadeIn from '@/lib/components/FadeIn';
+import { ActiveRouteContext } from '@/lib/hooks/activeRouteContext';
+import { primary, secondary } from '@/lib/styles/constants';
+import { useToast, Center, Card, useColorModeValue, Text, Heading, CardBody, Box, VStack, InputGroup, Input, Textarea } from '@chakra-ui/react';
+import React, { useContext, useEffect, useState } from 'react';
+import { submitEnquiry } from './components/Post';
+import { Icon } from '@iconify/react/dist/iconify.js';
 
-interface ContactMeProps {}
+interface ContactUsProps {
+}
 
-const ContactMe: React.FC<ContactMeProps> = () => {
-  const { changeActiveRoute } = useContext(ActiveRouteContext);
+const ContactUs: React.FC<ContactUsProps> = () => {
+    const { changeActiveRoute } = useContext(ActiveRouteContext);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -33,8 +21,8 @@ const ContactMe: React.FC<ContactMeProps> = () => {
   const [enquiry, setEnquiry] = useState("");
 
   useEffect(() => {
-    localStorage.setItem("route", "Contact Me");
-    changeActiveRoute("Contact Me");
+    localStorage.setItem("route", "Contact Us");
+    changeActiveRoute("Contact Us");
   }, []);
 
   const formErrorToast = useToast({
@@ -73,7 +61,7 @@ const ContactMe: React.FC<ContactMeProps> = () => {
           >
             <Center pt={"20px"} >
               <Heading size="md" pl={2}>
-                Contact Me
+                Contact Us
               </Heading>
             </Center>
             <CardBody>
@@ -146,7 +134,7 @@ const ContactMe: React.FC<ContactMeProps> = () => {
 
                 <Box height={6} />
                 <Center>
-                  <CustomButton type="submit">
+                  <CustomButton type="submit" w="100%">
                     <Icon icon="ri:checkbox-circle-fill" height={22} />
                     <Text pl={2}>Submit</Text>
                   </CustomButton>
@@ -160,4 +148,4 @@ const ContactMe: React.FC<ContactMeProps> = () => {
   );
 };
 
-export default ContactMe;
+export default ContactUs;

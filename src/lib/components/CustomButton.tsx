@@ -1,34 +1,17 @@
-import { Button, useColorModeValue } from "@chakra-ui/react";
-import React, { ReactNode } from "react";
+"use client";
+import { Button, ButtonProps, useColorModeValue } from "@chakra-ui/react";
+import React from "react";
 import { darkGradient, darkShadow, lightGradient, lightShadow } from "../styles/constants";
 
-interface CustomButtonProps {
-  children: ReactNode;
-  width?: string;
-  onClick?: any;
-  type? : any;
-}
-
-const CustomButton: React.FC<CustomButtonProps> = ({
-  children,
-  width,
-  onClick,
-  type
-}) => {
+const CustomButton: React.FC<ButtonProps> = (props) => {
   return (
-    <>
-      <Button
-      type={type}
-        onClick={onClick}
-        width={width}
-        bg={useColorModeValue(lightGradient, darkGradient)}
-        color={useColorModeValue("white", "black")}
-        _hover={{ boxShadow: useColorModeValue(lightShadow, darkShadow) }}
-        _active={{ bg: useColorModeValue(lightGradient, darkGradient)}}
-      >
-        {children}
-      </Button>
-    </>
+    <Button
+      bg={useColorModeValue(lightGradient, darkGradient)}
+      color={useColorModeValue("white", "black")}
+      _hover={{ boxShadow: useColorModeValue(lightShadow, darkShadow) }}
+      _active={{ bg: useColorModeValue(lightGradient, darkGradient) }}
+      {...props} // This ensures all props are passed down
+    />
   );
 };
 

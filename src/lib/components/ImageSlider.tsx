@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Divider, Flex, Image, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Button, Divider, Flex, Image, Text, useColorMode } from "@chakra-ui/react";
 import CustomButton from "./CustomButton";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { keyframes } from "@emotion/react";
@@ -7,22 +7,19 @@ import { keyframes } from "@emotion/react";
 const slides = [
   {
     src: "/gallery/1.jpg",
-    caption: "Renovate.",
+    caption: "Renovate. Reimagine. Reinvent.",
   },
   {
     src: "/gallery/2.jpeg",
-    caption: "Reimagine.",
+    caption: "Bright & Inspired Living",
   },
   {
     src: "/gallery/3.jpeg",
-    caption: "Reinvent.",
+    caption: "Experience The Difference",
   },
 ];
 
-const fadeIn = keyframes`
-  from { opacity: 0; }
-  to { opacity: 1; }
-`;
+
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -38,13 +35,12 @@ const ImageSlider = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const currentSlide = slides[currentIndex];
 
   return (
     <Box
       position="relative"
       width="100%"
-      height="500px"
+      height="700px"
       maxW="100%"
       mx="auto"
       overflow="hidden"
@@ -101,7 +97,7 @@ const ImageSlider = () => {
             transition="opacity 1s ease-in-out"
           >
             <Text
-              fontSize="5xl"
+              fontSize={{base: "5xl", sm: "5xl", md: "5xl", lg: "6xl"}}
               fontWeight="bold"
               fontFamily="Cinzel Decorative"
             >
@@ -114,7 +110,7 @@ const ImageSlider = () => {
       {/* Static Text and Button */}
       <Box
         position="absolute"
-        bottom={12}
+        bottom={5}
         width="100%"
         zIndex={3}
         textAlign="center"
@@ -124,12 +120,22 @@ const ImageSlider = () => {
           At C&S Builders, we bring your vision to life with quality residential and commercial construction, renovations, and design solutions.
         </Text>
         <Box h={5} />
-        <CustomButton>
-          <Flex alignItems="center">
-            <Icon icon="mingcute:schedule-fill" height={25} />
-            <Box pl={1}>Schedule An Appointment</Box>
-          </Flex>
-        </CustomButton>
+        <Flex w="100%" justifyContent="center">
+          <Button>
+            <Flex alignItems="center">
+              <Box color="yellow.500" _dark={{color: "yellow.300"}}><Icon icon="mingcute:schedule-fill" height={25}/></Box>
+              <Box pl={1}>Schedule An Appointment</Box>
+            </Flex>
+          </Button>
+          <Box w={10}/>
+          <Button>
+            <Flex alignItems="center">
+              <Box color="yellow.500" _dark={{color: "yellow.300"}}><Icon icon="mdi:mail" height={25} /></Box>
+              <Box pl={1}>Contact Us</Box>
+            </Flex>
+          </Button>
+        </Flex>
+        
       </Box>
     </Box>
   );
