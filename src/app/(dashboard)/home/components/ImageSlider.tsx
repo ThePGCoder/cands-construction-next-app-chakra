@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, Divider, Flex, Image, Text, useColorMode } from "@chakra-ui/react";
-import CustomButton from "./CustomButton";
+
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { keyframes } from "@emotion/react";
 
@@ -120,14 +120,14 @@ const ImageSlider = () => {
           At C&S Builders, we bring your vision to life with quality residential and commercial construction, renovations, and design solutions.
         </Text>
         <Box h={5} />
-        <Flex w="100%" justifyContent="center">
+        <Flex w="100%" justifyContent="center" direction={{base: "column", sm: "row"}} gap={5}>
           <Button>
             <Flex alignItems="center">
               <Box color="yellow.500" _dark={{color: "yellow.300"}}><Icon icon="mingcute:schedule-fill" height={25}/></Box>
               <Box pl={1}>Schedule An Appointment</Box>
             </Flex>
           </Button>
-          <Box w={10}/>
+          
           <Button>
             <Flex alignItems="center">
               <Box color="yellow.500" _dark={{color: "yellow.300"}}><Icon icon="mdi:mail" height={25} /></Box>

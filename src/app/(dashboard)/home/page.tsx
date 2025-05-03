@@ -21,12 +21,13 @@ import {
 import { motion } from "framer-motion";
 import React, { useContext, useEffect, useState } from "react";
 import { Icon } from "@iconify/react"; // Import Icon
-import ImageSlider from "@/lib/components/ImageSlider";
+
 import CustomCard from "@/lib/components/CustomCard";
 import { primary, secondary } from "@/lib/styles/constants";
 import WorkingHours from "./components/WorkingHours";
 import Sponsors from "./components/Sponsors";
 import Services from "./components/Services";
+import ImageSlider from "./components/ImageSlider";
 
 interface HomeProps {}
 

@@ -14,7 +14,7 @@ const Sponsors: React.FC<SponsorsProps> = () => {
                 
                 <Flex justifyContent="space-between">
                 <Flex justifyContent="flex-start" gap={5} alignItems="center">
-                  <Flex alignItems="center" gap={1} color="white"><Icon icon="uil:facebook" height={20}/>facebook</Flex>
+                  <Flex alignItems="center" gap={1} color="white"><Icon icon="uil:facebook" height={20}/></Flex>
                   
                   
                 </Flex>
