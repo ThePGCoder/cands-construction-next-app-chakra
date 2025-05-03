@@ -14,7 +14,7 @@ const Splash: React.FC<SplashProps> = () => {
   });
   return (
     <>
-      <Middle><Spinner w="100px" color="yellow.500" _dark={{color: "yellow.300"}}/></Middle>
+      <Middle><Spinner w="100px"height="100px" thickness={"5px"} color="yellow.500" _dark={{color: "yellow.300"}}/></Middle>
     </>
   );
 };
