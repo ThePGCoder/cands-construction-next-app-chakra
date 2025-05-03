@@ -1,6 +1,7 @@
 "use client";
 
 import Middle from "@/lib/components/Middle";
+import { Spinner } from "@chakra-ui/react";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 
@@ -13,7 +14,7 @@ const Splash: React.FC<SplashProps> = () => {
   });
   return (
     <>
-      <Middle>...loading</Middle>
+      <Middle><Spinner w="100px" color="yellow.500" _dark={{color: "yellow.300"}}/></Middle>
     </>
   );
 };

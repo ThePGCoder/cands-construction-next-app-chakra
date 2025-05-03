@@ -20,7 +20,7 @@ const Sponsors: React.FC<SponsorsProps> = () => {
                 </Flex>
                     <Flex justifyContent="flex-end" gap={5} alignItems="center">
                       <Image src="/logos/master-builders.png" w="40px" />
-                      <Image src="/logos/cb.svg" h="60px" />
+                      <Image src="/logos/CB.svg" h="60px" />
                       <Image src="/logos/lbp-logo.svg" h="40px" />
                     </Flex>
                 </Flex>
