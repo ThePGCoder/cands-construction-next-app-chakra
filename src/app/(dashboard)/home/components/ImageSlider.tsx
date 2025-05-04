@@ -88,7 +88,7 @@ const ImageSlider = () => {
           {/* Fading Caption */}
           <Box
             position="absolute"
-            bottom={60}
+            bottom={{base: "370px", sm: "270px", md: "270px"}}
             width="100%"
             zIndex={3}
             textAlign="center"
@@ -97,7 +97,7 @@ const ImageSlider = () => {
             transition="opacity 1s ease-in-out"
           >
             <Text
-              fontSize={{base: "5xl", sm: "5xl", md: "5xl", lg: "6xl"}}
+              fontSize={{base: "3xl", sm: "3xl", md: "5xl", lg: "6xl"}}
               fontWeight="bold"
               fontFamily="Cinzel Decorative"
             >
@@ -119,7 +119,7 @@ const ImageSlider = () => {
         <Text px={{ base: 12, sm: 12, md: 12, lg: 36 }}>
           At C&S Builders, we bring your vision to life with quality residential and commercial construction, renovations, and design solutions.
         </Text>
-        <Box h={5} />
+        <Box h={10} />
         <Flex w="100%" justifyContent="center" direction={{base: "column", sm: "row"}} gap={5}>
           <Button>
             <Flex alignItems="center">
