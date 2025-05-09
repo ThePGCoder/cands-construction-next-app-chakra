@@ -4,7 +4,7 @@ import { mode } from "@chakra-ui/theme-tools";
 export const theme = extendTheme({
   fonts: {
     heading: "Inter",
-    body: "Inter",
+    body: "Poppins",
   },
   config: {
     initialColorMode: "light",

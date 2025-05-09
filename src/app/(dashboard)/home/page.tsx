@@ -28,6 +28,7 @@ import WorkingHours from "./components/WorkingHours";
 import Sponsors from "./components/Sponsors";
 import Services from "./components/Services";
 import ImageSlider from "./components/ImageSlider";
+import TheProcess from "./components/TheProcess";
 
 interface HomeProps {}
 
@@ -44,6 +45,7 @@ const Home: React.FC<HomeProps> = () => {
       
       <VStack pb={50} gap={10}>
         <Services/>
+        <TheProcess/>
         <WorkingHours/>
         <Sponsors/>
       </VStack>

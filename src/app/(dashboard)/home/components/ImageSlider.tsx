@@ -97,9 +97,9 @@ const ImageSlider = () => {
             transition="opacity 1s ease-in-out"
           >
             <Text
-              fontSize={{base: "3xl", sm: "3xl", md: "5xl", lg: "6xl"}}
-              fontWeight="bold"
-              fontFamily="Cinzel Decorative"
+              fontSize={{base: "4xl", sm: "5xl", md: "6xl", lg: "7xl"}}
+              
+              
             >
               {slide.caption}
             </Text>
@@ -116,7 +116,7 @@ const ImageSlider = () => {
         textAlign="center"
         px={4}
       >
-        <Text px={{ base: 12, sm: 12, md: 12, lg: 36 }}>
+        <Text px={{ base: 12, sm: 12, md: 12, lg: 36 }} fontSize="lg">
           At C&S Builders, we bring your vision to life with quality residential and commercial construction, renovations, and design solutions.
         </Text>
         <Box h={10} />

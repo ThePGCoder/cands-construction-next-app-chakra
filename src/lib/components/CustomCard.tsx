@@ -17,12 +17,12 @@ const CustomCard: React.FC<CustomCardProps> = ({ children }) => {
   return (
     <>
       <Card
-        border="1px solid"
+        border="2px solid"
         borderRadius={6}
         borderColor={useColorModeValue(lightBorder, darkBorder)}
         p={4}
         bg={useColorModeValue(lightSurface, darkSurface)}
-        boxShadow="xl"
+        
       >
         {children}
       </Card>

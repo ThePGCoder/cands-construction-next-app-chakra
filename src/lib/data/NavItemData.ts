@@ -5,6 +5,16 @@ export const navItemData: NavItemProps[] = [
         link: "/home",
     },
     {
+        title: "Our Services",
+        icon: "mdi:cogs",
+        link: "/about-us",
+    },
+    {
+        title: "The Process",
+        icon: "fa6-solid:arrows-spin",
+        link: "/about-us",
+    },
+    {
         title: "About Us",
         icon: "gridicons:info",
         link: "/about-us",
