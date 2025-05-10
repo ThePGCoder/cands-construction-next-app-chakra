@@ -51,7 +51,7 @@ const EstimateMyJob: React.FC<EstimateMyJobProps> = () => {
     }, []);
 
   return (
-    <VStack pt={10} gap={5} px={12}>
+    <VStack pt={10} gap={5} px={12} pb={100}>
       <Heading size="md">Estimate My Job</Heading>
       <Box>Begin by entering some tasks one at a time, renovations can be made up of many tasks.</Box>
       <Flex>
