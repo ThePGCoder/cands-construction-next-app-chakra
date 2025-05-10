@@ -35,7 +35,7 @@ const AboutUs: React.FC<AboutUsProps> = () => {
         {/* Spacer */}
         <Box height={50} />
 
-        <Center>
+        <Center px={6}>
           {/* Main content card */}
           <CustomCard>
             {/* Card Header */}

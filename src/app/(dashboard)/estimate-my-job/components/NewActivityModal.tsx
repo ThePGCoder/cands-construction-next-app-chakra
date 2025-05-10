@@ -209,7 +209,7 @@ const NewActivityModal: React.FC<NewActivityModalProps> = ({
 
   return (
     <>
-      <Box position="fixed" bottom={20} right={5}>
+      <Box>
         <CustomButton onClick={modal.onOpen}>+ Add A Task</CustomButton>
       </Box>
       <Modal isOpen={modal.isOpen} onClose={modal.onClose}>
