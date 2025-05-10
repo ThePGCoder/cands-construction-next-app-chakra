@@ -35,7 +35,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {children}
         </Box>
       
-      <Footer />
+      
     </>
   );
 };
