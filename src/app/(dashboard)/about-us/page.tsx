@@ -59,7 +59,7 @@ const AboutUs: React.FC<AboutUsProps> = () => {
                   </ZoomIn>
                 </Box>
               </Center>
-              <Box maxW="container.lg" mx="auto" py={8} px={{ base: 4, md: 8 }}>
+              <Box maxW="container.lg" mx="auto" py={8}>
                 <Heading as="h2" size="lg" fontWeight="bold" mb={4}>
                   Building on Trust: Three Decades of Crafting Wellington’s
                   Timber Spaces
