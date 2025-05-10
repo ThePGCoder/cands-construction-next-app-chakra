@@ -79,13 +79,15 @@ const TheProcess: React.FC<TheProcessProps> = () => {
             columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
             columnGap={5}
             rowGap={5}
-            px={12}
+            
             maxW={900}
           >
+
+            
             {nonConsentedProcessItems.map((item, index) => (
-              <Box key={index}>
-                <CustomCard padding={0}>
-                  <VStack padding={4}>
+              <React.Fragment key={index}>
+                <CustomCard>
+                  <VStack>
                     <Flex
                       width="40px"
                       height="40px"
@@ -107,7 +109,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
                     <Box textAlign="center">{item.description}</Box>
                   </VStack>
                 </CustomCard>
-              </Box>
+              </React.Fragment>
             ))}
           </SimpleGrid>
           <Box>*Design if job requires consent.</Box>
