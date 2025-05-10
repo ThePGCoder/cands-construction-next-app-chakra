@@ -7,12 +7,12 @@ export const navItemData: NavItemProps[] = [
     {
         title: "Our Services",
         icon: "mdi:cogs",
-        link: "/about-us",
+        link: "/home",
     },
     {
         title: "The Process",
         icon: "fa6-solid:arrows-spin",
-        link: "/about-us",
+        link: "/home",
     },
     {
         title: "About Us",

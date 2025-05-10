@@ -1,20 +1,18 @@
 import CustomCard from "@/lib/components/CustomCard";
-import { darkBorder, lightBorder } from "@/lib/styles/constants";
+
 import {
-  Image,
   Box,
-  StepTitle,
-  StepDescription,
-  StepSeparator,
   VStack,
-  Stack,
+  Text,
   Flex,
   Heading,
-  HStack,
-  Center,
   SimpleGrid,
+  List,
+  ListIcon,
+  ListItem,
 } from "@chakra-ui/react";
 import React from "react";
+import { MdCheckCircle } from "react-icons/md";
 
 const nonConsentedProcessItems = [
   {
@@ -37,61 +35,23 @@ const nonConsentedProcessItems = [
     imageUrl: "/gallery/estimate.jpg",
   },
   {
-    title: "Specifications",
+    title: "Specs & Design*",
     description: "Defining specifications and creating a detailed design plan.",
     color: "gray.500",
     imageUrl: "/gallery/design.jpg",
   },
   {
     title: "Formal Quote",
-    description: "Issuing an official quote for the entire project.",
+    description:
+      "Issuing an official quote and contract for the entire project.",
     color: "blue.500",
+    imageUrl: "/gallery/quote.jpg",
   },
   {
-    title: "Build Process",
+    title: "Lets Build!",
     description: "Beginning the actual construction based on finalized plans.",
     color: "green.500",
-  },
-];
-
-const consentedProcessItems = [
-  {
-    title: "Enquire",
-    description: "Initial inquiry to explore requirements and possibilities.",
-    color: "red.500",
-  },
-
-  {
-    title: "Meet & Discuss Options",
-    description: "A meeting to go over different options and ideas.",
-    color: "orange.500",
-  },
-  {
-    title: "Estimate",
-    description:
-      "Providing a cost estimate based on the discussed requirements.",
-    color: "yellow.500",
-  },
-  {
-    title: "Preliminary Drawings",
-    description: "Creating initial sketches to visualize the proposed design.",
-    color: "gray.500",
-  },
-  {
-    title: "Working Drawings",
-    description:
-      "Developing detailed plans for implementation and construction.",
-    color: "purple.500",
-  },
-  {
-    title: "Formal Quote",
-    description: "Issuing an official quote for the entire project.",
-    color: "blue.500",
-  },
-  {
-    title: "Build Process",
-    description: "Beginning the actual construction based on finalized plans.",
-    color: "green.500",
+    imageUrl: "/gallery/building.jpg",
   },
 ];
 
@@ -101,14 +61,29 @@ const TheProcess: React.FC<TheProcessProps> = () => {
   return (
     <>
       <>
-        <VStack>
-          <Heading size="md" pb={5}>
-            Non Consented Build Process
+        <VStack gap={6} pt={10}>
+          
+          <Heading size="lg">
+            The Process:
           </Heading>
+          <Box>
+            We understand that embarking on a building project can feel
+            overwhelming. That's why we've streamlined our entire process to
+            make it simpler, more transparent, and enjoyable for you. From the
+            initial concept to the final handover, we focus on clear
+            communication and meticulous project management to ensure your
+            vision comes to life smoothly and efficiently.
+          </Box>
 
-          <SimpleGrid columns={3} gap={8}>
+          <SimpleGrid
+            columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
+            columnGap={5}
+            rowGap={5}
+            px={12}
+            maxW={900}
+          >
             {nonConsentedProcessItems.map((item, index) => (
-              <Box key={index} w="300px">
+              <Box key={index}>
                 <CustomCard padding={0}>
                   <VStack padding={4}>
                     <Flex
@@ -131,61 +106,83 @@ const TheProcess: React.FC<TheProcessProps> = () => {
                     <Box fontWeight="bold">{item.title}</Box>
                     <Box textAlign="center">{item.description}</Box>
                   </VStack>
-                  <Image
-                    src={item.imageUrl}
-                    borderRadius="4px"
-                    height="175px"
-                    objectFit="cover"
-                    
-                  />
                 </CustomCard>
               </Box>
             ))}
           </SimpleGrid>
-        </VStack>
+          <Box>*Design if job requires consent.</Box>
 
-        <VStack w="350px">
-          <Heading size="md" pb={5}>
-            Consented Build Process
+          <Heading as="h2" size="lg" mt={4}>
+            How do we make it simpler?
           </Heading>
 
-          {consentedProcessItems.map((item, index) => (
-            <Box key={index}>
-              <CustomCard>
-                <VStack>
-                  <Flex
-                    width="35px"
-                    height="35px"
-                    alignItems="center"
-                    justifyContent="center"
-                    borderRadius="50%"
-                    bg={item.color}
-                    color="white"
-                    border="2px solid"
-                    outline="2px solid"
-                    outlineColor={item.color}
-                    _dark={{ borderColor: "gray.700" }}
-                  >
-                    {index + 1}
-                  </Flex>
-                  <Box fontWeight="bold">{item.title}</Box>
-                  <Box textAlign="center">{item.description}</Box>
-                </VStack>
-              </CustomCard>
-              <Center>
-                {index != consentedProcessItems.length - 1 && (
-                  <>
-                    <Box
-                      mt={2}
-                      borderLeft="1px dashed"
-                      height="25px"
-                      borderColor="gray.500"
-                    ></Box>
-                  </>
-                )}
-              </Center>
-            </Box>
-          ))}
+          <List spacing={3} mt={2}>
+            <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" />
+              <Text as="span" fontWeight="bold" display="inline">
+                Clear Communication & Guidance:
+              </Text>
+              <Text display="inline">
+                {" "}
+                We're with you every step of the way, providing regular updates
+                and clear explanations. We listen to your needs and offer expert
+                advice, ensuring you feel informed and confident throughout the
+                project.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" />
+              <Text as="span" fontWeight="bold" display="inline">
+                Personalized Approach:
+              </Text>
+              <Text display="inline">
+                {" "}
+                Whether it's a new home, a renovation, or an extension, we
+                tailor our services to your specific requirements and budget.
+                {/* Optional: Consider adding a placeholder for company strength */}
+                {/* <Text as="span" fontStyle="italic"> e.g., "Our award-winning team..."</Text> */}
+              </Text>
+            </ListItem>
+            <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" />
+              <Text as="span" fontWeight="bold" display="inline">
+                Organized Project Management:
+              </Text>
+              <Text display="inline">
+                {" "}
+                We manage all the details, from planning and scheduling to
+                coordinating skilled tradespeople. Our commitment is to keep
+                your project on track and on budget, minimizing stress and
+                unforeseen complications.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" />
+              <Text as="span" fontWeight="bold" display="inline">
+                Quality Craftsmanship:
+              </Text>
+              <Text display="inline">
+                {" "}
+                A simpler process doesn't mean compromising on quality. We are
+                dedicated to delivering high-standard workmanship that you'll be
+                proud of for years to come.
+              </Text>
+            </ListItem>
+            <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" />
+              <Text as="span" fontWeight="bold" display="inline">
+                Stress-Free Experience:
+              </Text>
+              <Text display="inline">
+                {" "}
+                Our goal is to handle the complexities of the build so you can
+                focus on the excitement of creating your new space. We strive to
+                make your building journey a positive and rewarding one.
+              </Text>
+            </ListItem>
+          </List>
+
+          
         </VStack>
       </>
     </>

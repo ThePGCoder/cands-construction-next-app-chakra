@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cinzel_Decorative, Corinthia, Inter, Krona_One, Poppins } from "next/font/google";
+import { Cinzel_Decorative, Corinthia, Inter, Krona_One, Montserrat_Subrayada, Poppins } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
 import "@fontsource/corinthia";
@@ -18,6 +18,11 @@ const corinthia = Corinthia({
 });
 
 const kronaOne = Krona_One({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const montserrat = Montserrat_Subrayada({
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -44,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.className} ${inter.className} ${kronaOne.className} ${corinthia.className} ${cinzelDecorative.className} ${signatureFont.className} ${copperplate.className}`}
+      className={`${inter.className} ${inter.className} ${kronaOne.className} ${corinthia.className} ${cinzelDecorative.className} ${signatureFont.className} ${copperplate.className} ${montserrat.className}`}
     >
       <body>
         <Providers>{children}</Providers>

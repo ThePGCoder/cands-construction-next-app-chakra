@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, Divider, Flex, Image, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Text, useColorMode } from "@chakra-ui/react";
 
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { keyframes } from "@emotion/react";
 
 const slides = [
   {
@@ -19,8 +18,6 @@ const slides = [
   },
 ];
 
-
-
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { colorMode } = useColorMode();
@@ -34,7 +31,6 @@ const ImageSlider = () => {
 
     return () => clearInterval(interval);
   }, []);
-
 
   return (
     <Box
@@ -88,7 +84,7 @@ const ImageSlider = () => {
           {/* Fading Caption */}
           <Box
             position="absolute"
-            bottom={{base: "370px", sm: "270px", md: "270px"}}
+            bottom={{ base: "370px", sm: "270px", md: "270px" }}
             width="100%"
             zIndex={3}
             textAlign="center"
@@ -97,9 +93,8 @@ const ImageSlider = () => {
             transition="opacity 1s ease-in-out"
           >
             <Text
-              fontSize={{base: "4xl", sm: "5xl", md: "6xl", lg: "7xl"}}
-              
-              
+              fontSize={{ base: "4xl", sm: "5xl", md: "6xl", lg: "7xl" }}
+              fontFamily="poppins"
             >
               {slide.caption}
             </Text>
@@ -116,26 +111,38 @@ const ImageSlider = () => {
         textAlign="center"
         px={4}
       >
-        <Text px={{ base: 12, sm: 12, md: 12, lg: 36 }} fontSize="lg">
-          At C&S Builders, we bring your vision to life with quality residential and commercial construction, renovations, and design solutions.
+        <Text
+          px={{ base: 12, sm: 12, md: 12, lg: 36 }}
+          fontSize={{ base: "lg", sm: "lg", md: "xl", lg: "2xl" }}
+        >
+          We bring your vision to life with quality residential and commercial
+          construction, renovations, and design solutions.
         </Text>
         <Box h={10} />
-        <Flex w="100%" justifyContent="center" direction={{base: "column", sm: "row"}} gap={5}>
+        <Flex
+          w="100%"
+          justifyContent="center"
+          direction={{ base: "column", sm: "row" }}
+          gap={5}
+        >
           <Button>
             <Flex alignItems="center">
-              <Box color="yellow.500" _dark={{color: "yellow.300"}}><Icon icon="mingcute:schedule-fill" height={25}/></Box>
+              <Box color="yellow.500" _dark={{ color: "yellow.300" }}>
+                <Icon icon="mingcute:schedule-fill" height={25} />
+              </Box>
               <Box pl={1}>Schedule An Appointment</Box>
             </Flex>
           </Button>
-          
+
           <Button>
             <Flex alignItems="center">
-              <Box color="yellow.500" _dark={{color: "yellow.300"}}><Icon icon="mdi:mail" height={25} /></Box>
+              <Box color="yellow.500" _dark={{ color: "yellow.300" }}>
+                <Icon icon="mdi:mail" height={25} />
+              </Box>
               <Box pl={1}>Contact Us</Box>
             </Flex>
           </Button>
         </Flex>
-        
       </Box>
     </Box>
   );

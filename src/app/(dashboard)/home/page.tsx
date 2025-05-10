@@ -1,29 +1,10 @@
 "use client";
 
-import CustomButton from "@/lib/components/CustomButton";
-import Middle from "@/lib/components/Middle";
 import { ActiveRouteContext } from "@/lib/hooks/activeRouteContext";
-import {
-  Box,
-  Button,
-  Center,
-  Text,
-  Image,
-  Heading,
-  Stack,
-  useColorMode,
-  Grid,
-  GridItem,
-  SimpleGrid,
-  useColorModeValue,
-  VStack,
-} from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import React, { useContext, useEffect, useState } from "react";
-import { Icon } from "@iconify/react"; // Import Icon
+import { Box, VStack, Text } from "@chakra-ui/react";
 
-import CustomCard from "@/lib/components/CustomCard";
-import { primary, secondary } from "@/lib/styles/constants";
+import React, { useContext, useEffect } from "react";
+
 import WorkingHours from "./components/WorkingHours";
 import Sponsors from "./components/Sponsors";
 import Services from "./components/Services";
@@ -42,14 +23,18 @@ const Home: React.FC<HomeProps> = () => {
   return (
     <>
       <ImageSlider />
-      
+
       <VStack pb={50} gap={10}>
-        <Services/>
-        <TheProcess/>
-        <WorkingHours/>
-        <Sponsors/>
+        <Box maxW={900} px={6}>
+          <Text textAlign="center" pb={10} fontSize="4xl" fontFamily="poppins" fontWeight={500}>
+            Your Partner for a Simpler, Stress-Free Build.
+          </Text>
+          <Services />
+          <TheProcess />
+          <WorkingHours />
+          <Sponsors />
+        </Box>
       </VStack>
-      
     </>
   );
 };
