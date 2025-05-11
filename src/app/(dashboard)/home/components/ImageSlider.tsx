@@ -113,7 +113,7 @@ const ImageSlider = () => {
       >
         <Text
           px={{ base: 12, sm: 12, md: 12, lg: 36 }}
-          fontSize={{ base: "lg", sm: "lg", md: "xl", lg: "2xl" }}
+          fontSize={{ base: "xl", sm: "xl", md: "2xl", lg: "3xl" }}
         >
           We bring your vision to life with quality residential and commercial
           construction, renovations, and design solutions.

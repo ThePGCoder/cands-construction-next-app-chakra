@@ -7,6 +7,7 @@ interface NavItemProps {
     divider?: boolean;
     section?: string;
     color?: string;
+    scrollTo?: number;
 }
 
 interface Slide {

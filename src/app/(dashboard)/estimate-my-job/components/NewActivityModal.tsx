@@ -214,7 +214,7 @@ const NewActivityModal: React.FC<NewActivityModalProps> = ({
       </Box>
       <Modal isOpen={modal.isOpen} onClose={modal.onClose}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent mx={6}>
           <ModalHeader>Add A Task</ModalHeader>
           <ModalCloseButton />
           <ModalBody>

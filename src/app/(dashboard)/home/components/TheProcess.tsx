@@ -19,12 +19,14 @@ const nonConsentedProcessItems = [
     title: "Enquire",
     description: "Initial inquiry to explore requirements and possibilities.",
     color: "red.500",
+    darkColor: "red.300",
     imageUrl: "/gallery/enquiry.jpg",
   },
   {
     title: "Meet & Discuss Options",
     description: "A meeting to go over different options and ideas.",
     color: "orange.500",
+    darkColor: "orange.300",
     imageUrl: "/gallery/meeting.jpg",
   },
   {
@@ -32,12 +34,14 @@ const nonConsentedProcessItems = [
     description:
       "Providing a cost estimate based on the discussed requirements.",
     color: "yellow.500",
+    darkColor: "yellow.300",
     imageUrl: "/gallery/estimate.jpg",
   },
   {
     title: "Specs & Design*",
     description: "Defining specifications and creating a detailed design plan.",
     color: "gray.500",
+    darkColor: "gray.300",
     imageUrl: "/gallery/design.jpg",
   },
   {
@@ -45,12 +49,14 @@ const nonConsentedProcessItems = [
     description:
       "Issuing an official quote and contract for the entire project.",
     color: "blue.500",
+    darkColor: "blue.300",
     imageUrl: "/gallery/quote.jpg",
   },
   {
     title: "Lets Build!",
     description: "Beginning the actual construction based on finalized plans.",
     color: "green.500",
+    darkColor: "green.300",
     imageUrl: "/gallery/building.jpg",
   },
 ];
@@ -101,7 +107,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
                       boxShadow="0px 0px 7px #646464"
                       //outline="2px dotted"
                       outlineColor={item.color}
-                      _dark={{ borderColor: "gray.700", color: "gray.700" }}
+                      _dark={{ borderColor: "gray.700", color: "gray.700", bg: item.darkColor }}
                     >
                       {index + 1}
                     </Flex>
@@ -120,7 +126,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
 
           <List spacing={3} mt={2}>
             <ListItem>
-              <ListIcon as={MdCheckCircle} color="green.500" />
+              <ListIcon as={MdCheckCircle} color="green.500" _dark={{color: "green.300"}}/>
               <Text as="span" fontWeight="bold" display="inline">
                 Clear Communication & Guidance:
               </Text>
@@ -133,7 +139,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
               </Text>
             </ListItem>
             <ListItem>
-              <ListIcon as={MdCheckCircle} color="green.500" />
+              <ListIcon as={MdCheckCircle} color="green.500" _dark={{color: "green.300"}}/>
               <Text as="span" fontWeight="bold" display="inline">
                 Personalized Approach:
               </Text>
@@ -146,7 +152,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
               </Text>
             </ListItem>
             <ListItem>
-              <ListIcon as={MdCheckCircle} color="green.500" />
+              <ListIcon as={MdCheckCircle} color="green.500" _dark={{color: "green.300"}}/>
               <Text as="span" fontWeight="bold" display="inline">
                 Organized Project Management:
               </Text>
@@ -159,7 +165,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
               </Text>
             </ListItem>
             <ListItem>
-              <ListIcon as={MdCheckCircle} color="green.500" />
+              <ListIcon as={MdCheckCircle} color="green.500" _dark={{color: "green.300"}}/>
               <Text as="span" fontWeight="bold" display="inline">
                 Quality Craftsmanship:
               </Text>
@@ -171,7 +177,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
               </Text>
             </ListItem>
             <ListItem>
-              <ListIcon as={MdCheckCircle} color="green.500" />
+              <ListIcon as={MdCheckCircle} color="green.500" _dark={{color: "green.300"}}/>
               <Text as="span" fontWeight="bold" display="inline">
                 Stress-Free Experience:
               </Text>

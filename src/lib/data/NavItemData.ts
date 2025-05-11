@@ -7,12 +7,14 @@ export const navItemData: NavItemProps[] = [
     {
         title: "Our Services",
         icon: "mdi:cogs",
-        link: "/home",
+        //link: "/home",
+        scrollTo: 900
     },
     {
         title: "The Process",
         icon: "fa6-solid:arrows-spin",
-        link: "/home",
+        //link: "/home",
+        scrollTo: 2730
     },
     {
         title: "About Us",
@@ -31,7 +33,27 @@ export const navItemData: NavItemProps[] = [
         
         dropdown: true,
         subMenu: [
-        
+        {
+        title: "Johnsonville Villa",
+        icon: "mdi:location",
+        link: "/the-team",
+    },
+    {
+        title: "Thorndon Villa",
+        icon: "mdi:location",
+        link: "/the-team",
+    },
+    {
+        title: "Plimmerton Beach House",
+        icon: "mdi:location",
+        link: "/the-team",
+    },
+    {
+        title: "Newtown Villa",
+        icon: "mdi:location",
+        link: "/the-team",
+    },
+    
         
         ] 
     },

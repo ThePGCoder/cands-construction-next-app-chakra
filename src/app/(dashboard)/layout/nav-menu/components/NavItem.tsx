@@ -44,10 +44,15 @@ const NavItem: React.FC<NavItemProps> = ({ item, toggleDrawer }) => {
         color={activeRoute === item.title ? "white" : "black"}
         onClick={() => {
           item.dropdown && setExpanded(!expanded);
-          !item.dropdown ? router.push(item.link) : {};
+          if (item.link != null) {
+            router.push(item.link)
+          }
 
           !item.dropdown && toggleDrawer && toggleDrawer();
           item.action;
+          
+          if (item.scrollTo != null) {
+          window.scrollTo({top: item.scrollTo, behavior: "smooth"})}
         }}
       >
         <HStack justifyContent="space-between">
