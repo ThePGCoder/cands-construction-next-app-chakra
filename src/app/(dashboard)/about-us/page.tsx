@@ -60,10 +60,7 @@ const AboutUs: React.FC<AboutUsProps> = () => {
                 </Box>
               </Center>
               <Box maxW="container.lg" mx="auto" py={8}>
-                <Heading as="h2" size="lg" fontWeight="bold" mb={4}>
-                  Building on Trust: Three Decades of Crafting Wellington’s
-                  Timber Spaces
-                </Heading>
+                
 
                 <Text fontSize="md" mb={6}>
                   For over 10 years,&nbsp;

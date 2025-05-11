@@ -36,22 +36,22 @@ export const navItemData: NavItemProps[] = [
         {
         title: "Johnsonville Villa",
         icon: "mdi:location",
-        link: "/the-team",
+        link: "/gallery/johnsonville-villa",
     },
     {
         title: "Thorndon Villa",
         icon: "mdi:location",
-        link: "/the-team",
+        link: "/gallery/thorndon-villa",
     },
     {
         title: "Plimmerton Beach House",
         icon: "mdi:location",
-        link: "/the-team",
+        link: "/gallery/plimmerton-beach-house",
     },
     {
         title: "Newtown Villa",
         icon: "mdi:location",
-        link: "/the-team",
+        link: "/gallery/newtown-villa",
     },
     
         
