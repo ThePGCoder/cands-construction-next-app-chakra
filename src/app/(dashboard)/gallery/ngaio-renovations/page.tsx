@@ -1,3 +1,4 @@
+import Middle from '@/lib/components/Middle';
 import React from 'react';
 
 interface NgaioRenovations {
@@ -5,9 +6,9 @@ interface NgaioRenovations {
 
 const NgaioRenovations: React.FC<NgaioRenovations> = () => {
   return (
-    <div>
-      Ngaio Renovations
-    </div>
+    
+      <Middle>Ngaio Renovations</Middle>
+    
   );
 };
 

@@ -1,3 +1,4 @@
+import Middle from '@/lib/components/Middle';
 import React from 'react';
 
 interface NewtownVilla {
@@ -5,9 +6,9 @@ interface NewtownVilla {
 
 const NewtownVilla: React.FC<NewtownVilla> = () => {
   return (
-    <div>
-      Newtown Villa
-    </div>
+    
+      <Middle>Newtown Villa</Middle>
+    
   );
 };
 

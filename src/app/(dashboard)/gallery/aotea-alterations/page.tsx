@@ -1,3 +1,4 @@
+import Middle from '@/lib/components/Middle';
 import React from 'react';
 
 interface AoteaAlterations {
@@ -5,9 +6,9 @@ interface AoteaAlterations {
 
 const AoteaAlterations: React.FC<AoteaAlterations> = () => {
   return (
-    <div>
+    <Middle>
       Aotea Alterations
-    </div>
+    </Middle>
   );
 };
 

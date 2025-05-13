@@ -24,7 +24,7 @@ export const navItemData: NavItemProps[] = [
     {
         title: "Reviews",
         icon: "fluent:person-star-16-filled",
-        link: "/the-team",
+        link: "/reviews",
     },
  
     {

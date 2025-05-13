@@ -1,3 +1,4 @@
+import Middle from '@/lib/components/Middle';
 import React from 'react';
 
 interface RiverStoneTerracesBathroom {
@@ -5,9 +6,9 @@ interface RiverStoneTerracesBathroom {
 
 const RiverStoneTerracesBathroom: React.FC<RiverStoneTerracesBathroom> = () => {
   return (
-    <div>
-      River Stone Terraces Bathroom
-    </div>
+    
+      <Middle>River Stone Terraces Bathroom</Middle>
+   
   );
 };
 
