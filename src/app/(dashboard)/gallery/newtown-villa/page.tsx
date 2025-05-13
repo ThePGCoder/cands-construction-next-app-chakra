@@ -6,7 +6,7 @@ interface NewtownVilla {
 const NewtownVilla: React.FC<NewtownVilla> = () => {
   return (
     <div>
-      /* Component content here */
+      Newtown Villa
     </div>
   );
 };

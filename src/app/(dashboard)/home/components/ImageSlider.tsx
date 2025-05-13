@@ -94,7 +94,8 @@ const ImageSlider = () => {
           >
             <Text
               fontSize={{ base: "4xl", sm: "5xl", md: "6xl", lg: "7xl" }}
-              fontFamily="poppins"
+             fontFamily="Cinzel Decorative"
+             
             >
               {slide.caption}
             </Text>
@@ -113,7 +114,7 @@ const ImageSlider = () => {
       >
         <Text
           px={{ base: 12, sm: 12, md: 12, lg: 36 }}
-          fontSize={{ base: "xl", sm: "xl", md: "2xl", lg: "3xl" }}
+          fontSize={{ base: "lg", sm: "lg", md: "xl", lg: "xl" }}
         >
           We bring your vision to life with quality residential and commercial
           construction, renovations, and design solutions.

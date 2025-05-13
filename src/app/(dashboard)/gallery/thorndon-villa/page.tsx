@@ -6,7 +6,7 @@ interface ThorndonVilla {
 const ThorndonVilla: React.FC<ThorndonVilla> = () => {
   return (
     <div>
-      /* Component content here */
+      Thorndon Villa
     </div>
   );
 };

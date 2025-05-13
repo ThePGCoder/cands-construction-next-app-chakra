@@ -1,4 +1,5 @@
 import CustomCard from "@/lib/components/CustomCard";
+import RevealOnScroll from "@/lib/components/RevealOnScroll";
 import {
   Heading,
   SimpleGrid,
@@ -63,34 +64,36 @@ interface ServicesProps {}
 const Services: React.FC<ServicesProps> = () => {
   return (
     <>
-      <VStack gap={6}>
-        <Heading size="lg">Our Services:</Heading>
-        <Box>Explore our range of services:</Box>
-        <SimpleGrid
-          columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
-          columnGap={5}
-          rowGap={5}
-          
-        >
-          {serviceItems.map((item, index) => (
-            <React.Fragment key={index}>
-              <CustomCard>
-                <VStack onClick={() => {}}>
-                  <Box color={useColorModeValue("yellow.500", "yellow.300")}>
-                    <Icon icon={item.icon} height={45} />
-                  </Box>
-                  <Heading size="sm" textAlign="center" pt={2}>
-                    {item.title}
-                  </Heading>
-                  <Box textAlign="center" fontSize="sm">
-                    {item.description}
-                  </Box>
-                </VStack>
-              </CustomCard>
-            </React.Fragment>
-          ))}
-        </SimpleGrid>
-      </VStack>
+      <RevealOnScroll>
+        <VStack gap={6}>
+          <Heading size="lg">Our Services:</Heading>
+          <Box>Explore our range of services:</Box>
+          <SimpleGrid
+            columns={{ base: 1, sm: 2, md: 2, lg: 3 }}
+            columnGap={5}
+            rowGap={5}
+            
+          >
+            {serviceItems.map((item, index) => (
+              <React.Fragment key={index}>
+                <CustomCard>
+                  <VStack onClick={() => {}}>
+                    <Box color={useColorModeValue("yellow.500", "yellow.300")}>
+                      <Icon icon={item.icon} height={45} />
+                    </Box>
+                    <Heading size="sm" textAlign="center" pt={2}>
+                      {item.title}
+                    </Heading>
+                    <Box textAlign="center" fontSize="sm">
+                      {item.description}
+                    </Box>
+                  </VStack>
+                </CustomCard>
+              </React.Fragment>
+            ))}
+          </SimpleGrid>
+        </VStack>
+      </RevealOnScroll>
     </>
   );
 };

@@ -6,7 +6,7 @@ interface PlimmertonBeachHouse {
 const PlimmertonBeachHouse: React.FC<PlimmertonBeachHouse> = () => {
   return (
     <div>
-      /* Component content here */
+      Plimmerton Beach House
     </div>
   );
 };

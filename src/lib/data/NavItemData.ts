@@ -6,13 +6,13 @@ export const navItemData: NavItemProps[] = [
     },
     {
         title: "Our Services",
-        icon: "mdi:cogs",
+        icon: "raphael:hammer",
         //link: "/home",
         scrollTo: 900
     },
     {
         title: "The Process",
-        icon: "fa6-solid:arrows-spin",
+        icon: "mdi:circular-arrows",
         //link: "/home",
         scrollTo: 2730
     },
@@ -22,8 +22,8 @@ export const navItemData: NavItemProps[] = [
         link: "/about-us",
     },
     {
-        title: "The Team",
-        icon: "fluent:people-team-16-filled",
+        title: "Reviews",
+        icon: "fluent:person-star-16-filled",
         link: "/the-team",
     },
  
@@ -52,6 +52,21 @@ export const navItemData: NavItemProps[] = [
         title: "Newtown Villa",
         icon: "mdi:location",
         link: "/gallery/newtown-villa",
+    },
+    {
+        title: "Riverstone Terraces Bathroom",
+        icon: "mdi:location",
+        link: "/gallery/riverstone-terraces-bathroom",
+    },
+    {
+        title: "Ngaio Renovations",
+        icon: "mdi:location",
+        link: "/gallery/ngaio-renovations",
+    },
+    {
+        title: "Aotea Alterations",
+        icon: "mdi:location",
+        link: "/gallery/aotea-alterations",
     },
     
         
