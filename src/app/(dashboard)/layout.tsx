@@ -28,13 +28,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             "radial-gradient(circle, #ffffff 33%, transparent 66%)",
             "radial-gradient(circle, #3b4863 0%, transparent 66%)"
           )}
-          height="calc(100vh)"
+          minH="calc(100vh)"
           
           
         >
           {children}
         </Box>
-      
+      <Footer/>
       
     </>
   );

@@ -28,17 +28,7 @@ const Logo: React.FC<LogoProps> = ({ size }) => {
             justifyContent="center"
             alignItems="center"
           >
-            <Image src="/base.png" height={
-              size == "xs"
-                ? "15px"
-                : size == "s"
-                  ? "20px"
-                  : size == "m"
-                    ? "35px"
-                    : size == "l"
-                      ? "20px"
-                      : "20px"
-            } />
+            
             <Box fontSize={
               size == "xs"
                 ? 15
@@ -50,23 +40,34 @@ const Logo: React.FC<LogoProps> = ({ size }) => {
                       ? 40
                       : 50
             }>C&S</Box>
+            <Image src={useColorModeValue("/logos/cs.png", "/logos/cs0.png")} height={
+              size == "xs"
+                ? "15px"
+                : size == "s"
+                  ? "30px"
+                  : size == "m"
+                    ? "40px"
+                    : size == "l"
+                      ? "40px"
+                      : "40px"
+            } />
           </Flex>
           <Box
           pl={1}
-            letterSpacing={4}
+            letterSpacing={3}
             fontSize={
               size == "xs"
                 ? 11
                 : size == "s"
                   ? 15
                   : size == "m"
-                    ? 22
+                    ? 12
                     : size == "l"
                       ? 30
                       : 40
             }
           >
-            BUILDERS
+            CONSTRUCTION
           </Box>
         </Stack>
       </Flex>

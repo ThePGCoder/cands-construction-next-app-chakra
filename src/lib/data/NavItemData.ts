@@ -7,14 +7,14 @@ export const navItemData: NavItemProps[] = [
     {
         title: "Our Services",
         icon: "raphael:hammer",
-        //link: "/home",
-        scrollTo: 900
+        link: "/home",
+        scrollTo: {base: 200, sm: 300, md: 400, lg: 500}
     },
     {
         title: "The Process",
         icon: "mdi:circular-arrows",
-        //link: "/home",
-        scrollTo: 2730
+        link: "/home",
+        scrollTo: {base: 1700, sm: 2120, md: 2150, lg: 1780}
     },
     {
         title: "About Us",
@@ -48,20 +48,20 @@ export const navItemData: NavItemProps[] = [
         icon: "mdi:location",
         link: "/gallery/plimmerton-beach-house",
     },
-    {
+    /*{
         title: "Newtown Villa",
         icon: "mdi:location",
         link: "/gallery/newtown-villa",
+    },*/
+    {
+        title: "Renovations at Riverstone Terraces",
+        icon: "mdi:location",
+        link: "/gallery/renovations-at-riverstone-terraces",
     },
     {
-        title: "Riverstone Terraces Bathroom",
+        title: "Renovations in Ngaio",
         icon: "mdi:location",
-        link: "/gallery/riverstone-terraces-bathroom",
-    },
-    {
-        title: "Ngaio Renovations",
-        icon: "mdi:location",
-        link: "/gallery/ngaio-renovations",
+        link: "/gallery/renovations-in-ngaio",
     },
     {
         title: "Aotea Alterations",

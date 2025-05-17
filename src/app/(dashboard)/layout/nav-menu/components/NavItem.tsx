@@ -1,12 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Icon } from "@iconify/react";
-import {
-  Box,
-  Collapse,
-  HStack,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { useRouter } from "next/navigation";
+import { Box, Collapse, HStack, useBreakpointValue, useColorModeValue } from "@chakra-ui/react";
+import { usePathname, useRouter } from "next/navigation";
 import { ActiveRouteContext } from "@/lib/hooks/activeRouteContext";
 import {
   darkGradient,
@@ -23,12 +18,21 @@ interface NavItemProps {
 }
 
 const NavItem: React.FC<NavItemProps> = ({ item, toggleDrawer }) => {
-  const { activeRoute, changeActiveRoute } = useContext(ActiveRouteContext);
+  const { activeRoute } = useContext(ActiveRouteContext);
   const router = useRouter();
   const [expanded, setExpanded] = useState<boolean>(false);
+  const pathname = usePathname();
+
+  const scrollTarget = useBreakpointValue({
+  base: item.scrollTo?.base,
+  sm: item.scrollTo?.sm,
+  md: item.scrollTo?.md,
+  lg: item.scrollTo?.lg,
+});
+
   return (
     <>
-    <Box
+      <Box
         w={290}
         p={2}
         _hover={{
@@ -44,15 +48,23 @@ const NavItem: React.FC<NavItemProps> = ({ item, toggleDrawer }) => {
         color={activeRoute === item.title ? "white" : "black"}
         onClick={() => {
           item.dropdown && setExpanded(!expanded);
-          if (item.link != null) {
-            router.push(item.link)
-          }
+          const samePage = pathname === item.link;
 
-          !item.dropdown && toggleDrawer && toggleDrawer();
-          item.action;
-          
-          if (item.scrollTo != null) {
-          window.scrollTo({top: item.scrollTo, behavior: "smooth"})}
+          if (item.link && item.scrollTo != null) {
+            if (samePage) {
+    window.scrollTo({ top: scrollTarget ?? 0, behavior: "smooth" });
+  } else {
+    sessionStorage.setItem("scrollTo", (scrollTarget ?? 0).toString());
+    router.push(item.link);
+  }
+} else if (item.link) {
+            router.push(item.link);
+          } else if (item.scrollTo != null) {
+  window.scrollTo({ top: scrollTarget ?? 0, behavior: "smooth" });
+}
+
+          if (item.action) item.action();
+          if (!item.dropdown && toggleDrawer) toggleDrawer();
         }}
       >
         <HStack justifyContent="space-between">

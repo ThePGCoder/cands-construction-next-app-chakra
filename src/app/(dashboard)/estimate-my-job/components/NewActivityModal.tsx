@@ -105,9 +105,7 @@ const NewActivityModal: React.FC<NewActivityModalProps> = ({
   const isLinealMetersEnabled = worksType === "Fence" || worksType === "Beams";
   const isSquareMetersEnabled =
     worksType !== "Fence" &&
-    worksType !== "Beams" &&
-    worksType !== "Kitchen" &&
-    worksType !== "Bathroom";
+    worksType !== "Beams";
   const [isCalculateDisabled, setIsCalculateDisabled] = useState(true);
 
   const handleCalculate = () => {

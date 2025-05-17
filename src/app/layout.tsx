@@ -50,7 +50,7 @@ const cinzelDecorative = Cinzel_Decorative({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "C&S Builders",
+  title: "C&S Construction",
   description: "Your Building Experts",
 };
 

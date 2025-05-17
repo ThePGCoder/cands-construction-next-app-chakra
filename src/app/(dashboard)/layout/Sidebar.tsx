@@ -27,7 +27,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
         flexDirection="column"
       >
         <Box pt={6} pb={6}>
-          <Logo size="s" />
+          <Logo size="m" />
         </Box>
 
         <Divider width="90%" />

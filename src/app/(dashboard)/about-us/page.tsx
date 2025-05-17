@@ -22,6 +22,9 @@ import CustomCard from "@/lib/components/CustomCard"; // Assuming this component
 
 interface AboutUsProps {}
 
+
+
+
 const AboutUs: React.FC<AboutUsProps> = () => {
   const { changeActiveRoute } = useContext(ActiveRouteContext);
 
@@ -69,7 +72,7 @@ const AboutUs: React.FC<AboutUsProps> = () => {
                     fontWeight="semibold"
                     color={useColorModeValue("yellow.500", "yellow.300")}
                   >
-                    C&S Builders
+                    C&S Construction
                   </Text>{" "}
                   has shaped the homes of this city. The company directors Phil
                   & Kent have a combined industry experience of nearly 50 years.
@@ -95,7 +98,7 @@ const AboutUs: React.FC<AboutUsProps> = () => {
                 </Text>
 
                 <Heading as="h3" size="md" fontWeight="semibold" mt={6} mb={3}>
-                  What Three Decades of Experience Means for You
+                  What Decades of Experience Means for You
                 </Heading>
 
                 <Box pl={{ base: 0, md: 4 }} mb={4}>

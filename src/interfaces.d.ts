@@ -7,11 +7,12 @@ interface NavItemProps {
     divider?: boolean;
     section?: string;
     color?: string;
-    scrollTo?: number;
+    scrollTo?: { base: number; sm?: number; md?: number; lg?: number };
+
 }
 
 interface Slide {
     url: string;
-    caption?: string; // Optional caption
+    
   }
   

@@ -107,14 +107,14 @@ const TheProcess: React.FC<TheProcessProps> = () => {
                           fontWeight="bold"
                           color="white"
                           border="2px solid"
-                          boxShadow="0px 0px 7px #646464"
-                          //outline="2px dotted"
+                          
+                          outline="2px dashed"
                           outlineColor={item.color}
                           _dark={{ borderColor: "gray.700", color: "gray.700", bg: item.darkColor }}
                         >
                           {index + 1}
                         </Flex>
-                        <Box fontWeight="bold">{item.title}</Box>
+                        <Box fontWeight="bold" textAlign="center">{item.title}</Box>
                         <Box textAlign="center">{item.description}</Box>
                       </VStack>
                     </CustomCard>

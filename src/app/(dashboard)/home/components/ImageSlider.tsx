@@ -84,7 +84,7 @@ const ImageSlider = () => {
           {/* Fading Caption */}
           <Box
             position="absolute"
-            bottom={{ base: "370px", sm: "270px", md: "270px" }}
+            bottom={{ base: "370px", sm: "330px", md: "350px", lg: "270px" }}
             width="100%"
             zIndex={3}
             textAlign="center"
@@ -94,8 +94,7 @@ const ImageSlider = () => {
           >
             <Text
               fontSize={{ base: "4xl", sm: "5xl", md: "6xl", lg: "7xl" }}
-             fontFamily="Cinzel Decorative"
-             
+              fontFamily="Cinzel Decorative"
             >
               {slide.caption}
             </Text>
@@ -123,7 +122,7 @@ const ImageSlider = () => {
         <Flex
           w="100%"
           justifyContent="center"
-          direction={{ base: "column", sm: "row" }}
+          direction={{ base: "column", lg: "row" }}
           gap={5}
         >
           <Button>
@@ -142,6 +141,11 @@ const ImageSlider = () => {
               </Box>
               <Box pl={1}>Contact Us</Box>
             </Flex>
+          </Button>
+
+          <Button>
+            <Image src="calc.png" width="30px" />
+            Estimate My Job
           </Button>
         </Flex>
       </Box>
