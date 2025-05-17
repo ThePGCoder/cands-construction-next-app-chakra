@@ -10,8 +10,6 @@ import Sponsors from "./components/Sponsors";
 import Services from "./components/Services";
 import ImageSlider from "./components/ImageSlider";
 import TheProcess from "./components/TheProcess";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import { lightBorder } from "@/lib/styles/constants";
 
 interface HomeProps {}
 

@@ -62,15 +62,15 @@ const BASE_COSTS: Record<string, number> = {
   "New Build": 2500,
   "Plastering and Painting": 100,
   "Addition": 3000,
-  "Deck": 500,
+  "Deck": 300,
   "Fence": 150,
   "Shed / Outbuilding": 2500,
   "Retaining Wall": 800,
-  "Kitchen": 5000,
-  "Bathroom": 4000,
+  "Kitchen": 1500,
+  "Bathroom": 1500,
   "Floor Coverings": 300,
   "Beams": 1000,
-  "Tiling": 100
+  "Tiling": 200
 };
 
 const QualityExplanations = () => (
@@ -120,9 +120,9 @@ const NewActivityModal: React.FC<NewActivityModalProps> = ({
 
     let qualityMultiplier = 1;
     if (quality === "Intermediate") {
-      qualityMultiplier = 2;
+      qualityMultiplier = 1.5;
     } else if (quality === "Architectural") {
-      qualityMultiplier = 3;
+      qualityMultiplier = 2;
     }
 
     let totalCost = 0;
