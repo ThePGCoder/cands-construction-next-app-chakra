@@ -7,19 +7,32 @@ export const submitEnquiry = async (
   enquiry: string
 ): Promise<{ success: boolean; error?: string }> => {
   try {
-    const result = await emailjs.send(
+    // Send to admin
+    await emailjs.send(
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ADMIN_ID!,
       {
         user_name: name,
-        email: email,
+        user_email: email,
         subject,
         message: enquiry,
       },
       process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
     );
 
-    console.log('EmailJS sent:', result.text);
+    // Send confirmation to user
+    await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_USER_ID!,
+      {
+        user_name: name,
+        user_email: email,
+        subject,
+        message: enquiry,
+      },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    );
+
     return { success: true };
   } catch (error: any) {
     console.error('EmailJS error:', error.text || error.message);
