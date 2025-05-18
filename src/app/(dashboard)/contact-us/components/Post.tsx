@@ -1,28 +1,28 @@
-"use server";
-
-import { Resend } from "resend";
-import CustomEmail from "../../../../../emails/CustomEmail";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import emailjs from 'emailjs-com';
 
 export const submitEnquiry = async (
   name: string,
   email: string,
   subject: string,
   enquiry: string
-) => {
-  const { error } = await resend.emails.send({
-    from: "Philip <phil@pgcoder.co.nz>",
-    subject: subject,
-    to: email,
-    react: CustomEmail({
-      name: name,
-      subject: subject,
-      enquiry: enquiry
-    }) as React.ReactNode,
-  });
-  if (error) {
-    console.log(error);
-    return;
+): Promise<{ success: boolean; error?: string }> => {
+  try {
+    const result = await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      {
+        user_name: name,
+        user_email: email,
+        subject,
+        message: enquiry,
+      },
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+    );
+
+    console.log('EmailJS sent:', result.text);
+    return { success: true };
+  } catch (error: any) {
+    console.error('EmailJS error:', error.text || error.message);
+    return { success: false, error: error.text || error.message };
   }
 };
