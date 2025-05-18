@@ -53,7 +53,7 @@ const Reviews: React.FC<Reviews> = () => {
   return (
     <>
     <Center pt={5}><Heading size="md">Reviews</Heading></Center>
-      <Center pt={10}>
+      <Center pt={10} pb={20}>
         <SimpleGrid columns={{ base: 1, sm: 1, md: 1, lg: 3 }} gap={10}>
           {customers.map((item, index) => (
             <SlideFade
