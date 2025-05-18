@@ -1,3 +1,5 @@
+
+
 import CustomCard from "@/lib/components/CustomCard";
 import RevealOnScroll from "@/lib/components/RevealOnScroll";
 import {
@@ -5,7 +7,7 @@ import {
   SimpleGrid,
   VStack,
   Box,
-  useColorModeValue,
+  
 } from "@chakra-ui/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import React from "react";
@@ -77,8 +79,8 @@ const Services: React.FC<ServicesProps> = () => {
             {serviceItems.map((item, index) => (
               <React.Fragment key={index}>
                 <CustomCard>
-                  <VStack onClick={() => {}}>
-                    <Box color={useColorModeValue("yellow.500", "yellow.300")}>
+                  <VStack>
+                    <Box color="yellow.500" _dark={{color: "yellow.300"}}>
                       <Icon icon={item.icon} height={45} />
                     </Box>
                     <Heading size="sm" textAlign="center" pt={2}>

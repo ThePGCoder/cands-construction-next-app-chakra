@@ -50,9 +50,58 @@ const cinzelDecorative = Cinzel_Decorative({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "C&S Construction",
-  description: "Your Building Experts",
+  title: "C&S Construction – Your Trusted Building Experts",
+  description:
+    "C&S Construction offers expert building services across New Zealand. From residential renovations to new builds, we're your trusted construction partner.",
+  keywords: [
+    "C&S Construction",
+    "New Zealand builders",
+    "home renovations",
+    "new builds",
+    "licensed building practitioners",
+    "construction services",
+    "Wellington construction",
+  ],
+  authors: [
+    { name: "C&S Construction" },
+    { name: "Phil Collings", url: "https://cands.co.nz/about" },
+  ],
+  creator: "C&S Construction",
+  publisher: "C&S Construction Ltd",
+  openGraph: {
+    title: "C&S Construction – Your Trusted Building Experts",
+    description:
+      "Leading construction company in New Zealand, specializing in new builds, home extensions, and renovations.",
+    url: "https://cands.co.nz",
+    siteName: "C&S Construction",
+    images: [
+      {
+        url: "https://cands.co.nz/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "C&S Construction - Wellington Builders",
+      },
+    ],
+    locale: "en_NZ",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "C&S Construction – Your Trusted Building Experts",
+    description:
+      "Top-tier building and renovation services across New Zealand.",
+    images: ["https://cands.co.nz/og-image.jpg"],
+    creator: "@csconstruction",
+  },
+  metadataBase: new URL("https://cands.co.nz"),
+  alternates: {
+    canonical: "https://cands.co.nz",
+    languages: {
+      "en-NZ": "https://cands.co.nz",
+    },
+  },
 };
+
 
 export default function RootLayout({
   children,

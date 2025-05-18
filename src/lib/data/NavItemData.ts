@@ -8,13 +8,13 @@ export const navItemData: NavItemProps[] = [
         title: "Our Services",
         icon: "raphael:hammer",
         link: "/home",
-        scrollTo: {base: 200, sm: 300, md: 400, lg: 500}
+        scrollTo: {base: 880, sm: 880, md: 880, lg: 830}
     },
     {
         title: "The Process",
         icon: "mdi:circular-arrows",
         link: "/home",
-        scrollTo: {base: 1700, sm: 2120, md: 2150, lg: 1780}
+        scrollTo: {base: 2680, sm: 2120, md: 2130, lg: 1760}
     },
     {
         title: "About Us",
@@ -80,10 +80,16 @@ export const navItemData: NavItemProps[] = [
     {
         title: "Contact Us",
         icon: "mdi:email",
-        link: "/contact-us",
+        link: "/home",
+        scrollTo: {base: 4000, sm: 4000, md: 4000, lg: 4000}
     },
     
-    
+    {
+        title: "Make Enquiry",
+        icon: "mdi:mail",
+        link: "/contact",
+        
+    },
     
     
     

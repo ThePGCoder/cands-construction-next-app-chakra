@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState, useEffect } from "react";
 import { Box, Button, Flex, Image, Text, useColorMode } from "@chakra-ui/react";
 
@@ -125,21 +127,14 @@ const ImageSlider = () => {
           direction={{ base: "column", lg: "row" }}
           gap={5}
         >
-          <Button>
-            <Flex alignItems="center">
-              <Box color="yellow.500" _dark={{ color: "yellow.300" }}>
-                <Icon icon="mingcute:schedule-fill" height={25} />
-              </Box>
-              <Box pl={1}>Schedule An Appointment</Box>
-            </Flex>
-          </Button>
+          
 
           <Button>
             <Flex alignItems="center">
               <Box color="yellow.500" _dark={{ color: "yellow.300" }}>
                 <Icon icon="mdi:mail" height={25} />
               </Box>
-              <Box pl={1}>Contact Us</Box>
+              <Box pl={1}>Make Enquiry</Box>
             </Flex>
           </Button>
 

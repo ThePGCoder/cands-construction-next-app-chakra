@@ -1,30 +1,20 @@
-"use client";
 
-import { ActiveRouteContext } from "@/lib/hooks/activeRouteContext";
-import { Box, VStack, Text, Image, Heading, Center, Stack, Button } from "@chakra-ui/react";
+import { Box, VStack, Text, Link } from "@chakra-ui/react";
 
-import React, { useContext, useEffect } from "react";
+import React from "react";
 
 import WorkingHours from "./components/WorkingHours";
 import Sponsors from "./components/Sponsors";
 import Services from "./components/Services";
 import ImageSlider from "./components/ImageSlider";
 import TheProcess from "./components/TheProcess";
+import HomeRouteClientLogic from "./components/HomeRouteClientLogic";
+import ContactDetails from "./components/ContactDetails";
 
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = () => {
-  const { changeActiveRoute } = useContext(ActiveRouteContext);
-
-  useEffect(() => {
-    changeActiveRoute("Home");
-    const scrollTo = sessionStorage.getItem("scrollTo");
-    if (scrollTo) {
-      window.scrollTo({ top: parseInt(scrollTo), behavior: "smooth" });
-      sessionStorage.removeItem("scrollTo");
-    }
-  }, []);
-
+  
   return (
     <>
       <ImageSlider />
@@ -46,9 +36,12 @@ const Home: React.FC<HomeProps> = () => {
           <Services />
           <TheProcess />
           <WorkingHours />
+          <ContactDetails/>
           <Sponsors />
         </Box>
       </VStack>
+
+      <HomeRouteClientLogic/>
     </>
   );
 };

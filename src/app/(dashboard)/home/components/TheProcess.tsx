@@ -1,3 +1,5 @@
+
+
 import CustomCard from "@/lib/components/CustomCard";
 import RevealOnScroll from "@/lib/components/RevealOnScroll";
 
@@ -12,8 +14,9 @@ import {
   ListIcon,
   ListItem,
 } from "@chakra-ui/react";
+import { Icon } from "@iconify/react/dist/iconify.js";
 import React from "react";
-import { MdCheckCircle } from "react-icons/md";
+
 
 const nonConsentedProcessItems = [
   {
@@ -133,7 +136,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
     
               <List spacing={3} mt={2}>
                 <ListItem>
-                  <ListIcon as={MdCheckCircle} color="green.500" _dark={{color: "green.300"}}/>
+                   <Box color="green.500" _dark={{color: "green.300"}}><Icon icon="lets-icons:check-fill" height={20} /></Box>
                   <Text as="span" fontWeight="bold" display="inline">
                     Clear Communication & Guidance:
                   </Text>
@@ -146,7 +149,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={MdCheckCircle} color="green.500" _dark={{color: "green.300"}}/>
+                  <Box color="green.500" _dark={{color: "green.300"}}><Icon icon="lets-icons:check-fill" height={20} /></Box>
                   <Text as="span" fontWeight="bold" display="inline">
                     Personalized Approach:
                   </Text>
@@ -159,7 +162,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={MdCheckCircle} color="green.500" _dark={{color: "green.300"}}/>
+                  <Box color="green.500" _dark={{color: "green.300"}}><Icon icon="lets-icons:check-fill" height={20} /></Box>
                   <Text as="span" fontWeight="bold" display="inline">
                     Organized Project Management:
                   </Text>
@@ -172,7 +175,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={MdCheckCircle} color="green.500" _dark={{color: "green.300"}}/>
+                  <Box color="green.500" _dark={{color: "green.300"}}><Icon icon="lets-icons:check-fill" height={20} /></Box>
                   <Text as="span" fontWeight="bold" display="inline">
                     Quality Craftsmanship:
                   </Text>
@@ -184,7 +187,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <ListIcon as={MdCheckCircle} color="green.500" _dark={{color: "green.300"}}/>
+                  <Box color="green.500" _dark={{color: "green.300"}}><Icon icon="lets-icons:check-fill" height={20} /></Box>
                   <Text as="span" fontWeight="bold" display="inline">
                     Stress-Free Experience:
                   </Text>
