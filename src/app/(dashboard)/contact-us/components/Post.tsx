@@ -12,7 +12,7 @@ export const submitEnquiry = async (
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
       {
         user_name: name,
-        user_email: email,
+        email: email,
         subject,
         message: enquiry,
       },
