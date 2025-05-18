@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Box, Button, Flex, Image, Text, useColorMode } from "@chakra-ui/react";
 
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { useRouter } from "next/navigation";
 
 const slides = [
   {
@@ -23,6 +24,7 @@ const slides = [
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { colorMode } = useColorMode();
+  const router = useRouter();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -129,7 +131,7 @@ const ImageSlider = () => {
         >
           
 
-          <Button>
+          <Button onClick={() => router.push("/contact")}>
             <Flex alignItems="center">
               <Box color="yellow.500" _dark={{ color: "yellow.300" }}>
                 <Icon icon="mdi:mail" height={25} />
@@ -138,7 +140,7 @@ const ImageSlider = () => {
             </Flex>
           </Button>
 
-          <Button>
+          <Button onClick={() => router.push("estimate-my-job")}>
             <Image src="calc.png" width="30px" />
             Estimate My Job
           </Button>
