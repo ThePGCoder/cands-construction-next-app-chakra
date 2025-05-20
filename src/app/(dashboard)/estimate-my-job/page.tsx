@@ -53,6 +53,7 @@ const EstimateMyJob: React.FC<EstimateMyJobProps> = () => {
   return (
     <VStack pt={10} gap={5} px={12} pb={100}>
       <Heading size="md">Estimate My Job</Heading>
+      <Box fontSize="xs">This tool provides a general cost estimate based on the information entered. It is intended for guidance only and does not constitute a formal quote. Actual costs may vary depending on site conditions, materials, and scope of work. A site visit and detailed assessment are required to provide an accurate and confirmed price.</Box>
       <Box>Begin by entering some tasks one at a time, renovations can be made up of many tasks.</Box>
       <Flex>
         Tasks:&nbsp;
