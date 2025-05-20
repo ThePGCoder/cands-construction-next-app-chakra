@@ -81,7 +81,7 @@ export const navItemData: NavItemProps[] = [
         title: "Contact Us",
         icon: "mdi:email",
         link: "/home",
-        scrollTo: {base: 4000, sm: 4000, md: 4000, lg: 4000}
+        scrollTo: {base: 8000, sm: 8000, md: 8000, lg: 8000}
     },
     
     {

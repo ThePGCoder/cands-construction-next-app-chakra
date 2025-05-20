@@ -8,7 +8,7 @@ const WorkingHours: React.FC<WorkingHoursProps> = () => {
     return (
         <>
 
-        <VStack py={10}>
+        <VStack pb={10}>
             <Heading size="md">Our Hours:</Heading>
                 <SimpleGrid columns={2}>
                     <Box fontWeight="bold">Monday</Box><Box>7:30am to 5:00pm</Box>

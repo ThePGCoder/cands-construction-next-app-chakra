@@ -11,10 +11,10 @@ import {
   Heading,
   SimpleGrid,
   List,
-  ListIcon,
+
   ListItem,
 } from "@chakra-ui/react";
-import { Icon } from "@iconify/react/dist/iconify.js";
+
 import React from "react";
 
 
@@ -136,7 +136,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
     
               <List spacing={3} mt={2}>
                 <ListItem>
-                   <Box color="green.500" _dark={{color: "green.300"}}><Icon icon="lets-icons:check-fill" height={20} /></Box>
+
                   <Text as="span" fontWeight="bold" display="inline">
                     Clear Communication & Guidance:
                   </Text>
@@ -149,7 +149,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <Box color="green.500" _dark={{color: "green.300"}}><Icon icon="lets-icons:check-fill" height={20} /></Box>
+
                   <Text as="span" fontWeight="bold" display="inline">
                     Personalized Approach:
                   </Text>
@@ -162,7 +162,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <Box color="green.500" _dark={{color: "green.300"}}><Icon icon="lets-icons:check-fill" height={20} /></Box>
+
                   <Text as="span" fontWeight="bold" display="inline">
                     Organized Project Management:
                   </Text>
@@ -175,7 +175,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <Box color="green.500" _dark={{color: "green.300"}}><Icon icon="lets-icons:check-fill" height={20} /></Box>
+
                   <Text as="span" fontWeight="bold" display="inline">
                     Quality Craftsmanship:
                   </Text>
@@ -187,7 +187,7 @@ const TheProcess: React.FC<TheProcessProps> = () => {
                   </Text>
                 </ListItem>
                 <ListItem>
-                  <Box color="green.500" _dark={{color: "green.300"}}><Icon icon="lets-icons:check-fill" height={20} /></Box>
+
                   <Text as="span" fontWeight="bold" display="inline">
                     Stress-Free Experience:
                   </Text>

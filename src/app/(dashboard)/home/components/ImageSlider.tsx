@@ -131,7 +131,7 @@ const ImageSlider = () => {
         >
           
 
-          <Button onClick={() => router.push("/contact")}>
+          <Button onClick={() => router.push("/make-enquiry")}>
             <Flex alignItems="center">
               <Box color="yellow.500" _dark={{ color: "yellow.300" }}>
                 <Icon icon="mdi:mail" height={25} />

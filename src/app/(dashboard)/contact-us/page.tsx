@@ -61,7 +61,7 @@ const ContactUs: React.FC<ContactUsProps> = () => {
           >
             <Center pt={"20px"} >
               <Heading size="md" pl={2}>
-                Contact Us
+                Make Enquiry
               </Heading>
             </Center>
             <CardBody>

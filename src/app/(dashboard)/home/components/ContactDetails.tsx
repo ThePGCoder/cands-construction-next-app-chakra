@@ -1,4 +1,4 @@
-import { Box, Link, VStack } from '@chakra-ui/react';
+import { Box, Link, VStack, Heading } from '@chakra-ui/react';
 
 import React from 'react';
 
@@ -7,7 +7,8 @@ interface ContactDetails {
 
 const ContactDetails: React.FC<ContactDetails> = () => {
   return (
-    <VStack pb={10}>
+    <VStack py={10}>
+      <Heading size="md">Contact Us:</Heading>
         <Box>
       Phil Collings{" "}
       <Link href="tel:0221769172" color="blue.500">

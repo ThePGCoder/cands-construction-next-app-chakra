@@ -14,7 +14,7 @@ import ContactDetails from "./components/ContactDetails";
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = () => {
-  
+
   return (
     <>
       <ImageSlider />
@@ -35,8 +35,9 @@ const Home: React.FC<HomeProps> = () => {
           </Text>
           <Services />
           <TheProcess />
+            <ContactDetails/>
           <WorkingHours />
-          <ContactDetails/>
+
           <Sponsors />
         </Box>
       </VStack>
