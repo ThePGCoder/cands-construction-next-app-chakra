@@ -9,10 +9,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { submitEnquiry } from './components/Post';
 import { Icon } from '@iconify/react/dist/iconify.js';
 
-interface ContactUsProps {
+interface MakeEnquiryProps {
 }
 
-const ContactUs: React.FC<ContactUsProps> = () => {
+const MakeEnquiry: React.FC<MakeEnquiryProps> = () => {
     const { changeActiveRoute } = useContext(ActiveRouteContext);
 
   const [name, setName] = useState("");
@@ -21,8 +21,8 @@ const ContactUs: React.FC<ContactUsProps> = () => {
   const [enquiry, setEnquiry] = useState("");
 
   useEffect(() => {
-    localStorage.setItem("route", "Contact Us");
-    changeActiveRoute("Contact Us");
+    localStorage.setItem("route", "Make Enquiry");
+    changeActiveRoute("Make Enquiry");
   }, []);
 
   const formErrorToast = useToast({
@@ -148,4 +148,4 @@ const ContactUs: React.FC<ContactUsProps> = () => {
   );
 };
 
-export default ContactUs;
+export default MakeEnquiry;

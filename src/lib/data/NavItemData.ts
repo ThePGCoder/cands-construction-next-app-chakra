@@ -87,7 +87,7 @@ export const navItemData: NavItemProps[] = [
     {
         title: "Make Enquiry",
         icon: "mdi:mail",
-        link: "/contact-us",
+        link: "/make-enquiry",
         
     },
     

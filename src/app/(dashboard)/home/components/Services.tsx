@@ -65,7 +65,7 @@ interface ServicesProps {}
 
 const Services: React.FC<ServicesProps> = () => {
   return (
-    <>
+    <Box id="services">
       <RevealOnScroll>
         <VStack gap={6}>
           <Heading size="lg">Our Services:</Heading>
@@ -96,7 +96,7 @@ const Services: React.FC<ServicesProps> = () => {
           </SimpleGrid>
         </VStack>
       </RevealOnScroll>
-    </>
+    </Box>
   );
 };
 
