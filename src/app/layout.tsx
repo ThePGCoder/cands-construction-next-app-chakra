@@ -11,6 +11,7 @@ import "./globals.css";
 import Providers from "./providers";
 import "@fontsource/corinthia";
 import localFont from "next/font/local";
+import GoogleTag from "@/lib/components/GoogleTag";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -102,7 +103,6 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -113,6 +113,9 @@ export default function RootLayout({
       lang="en"
       className={`${inter.className} ${kronaOne.className} ${corinthia.className} ${cinzelDecorative.className} ${signatureFont.className} ${copperplate.className} ${montserrat.className}`}
     >
+      <head>
+        <GoogleTag />
+      </head>
       <body>
         <Providers>{children}</Providers>
       </body>
