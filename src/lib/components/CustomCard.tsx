@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Card, useColorModeValue } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
@@ -14,7 +14,11 @@ interface CustomCardProps {
   padding?: number | string;
 }
 
-const CustomCard: React.FC<CustomCardProps> = ({ children, padding = 4, ...props }) => {
+const CustomCard: React.FC<CustomCardProps> = ({
+  children,
+  padding = 4,
+  ...props
+}) => {
   return (
     <Card
       border="2px solid"

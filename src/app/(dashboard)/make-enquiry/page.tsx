@@ -1,24 +1,38 @@
-"use client"
+"use client";
 
-import CustomButton from '@/lib/components/CustomButton';
-import FadeIn from '@/lib/components/FadeIn';
-import { ActiveRouteContext } from '@/lib/hooks/activeRouteContext';
-import { primary, secondary } from '@/lib/styles/constants';
-import { useToast, Center, Card, useColorModeValue, Text, Heading, CardBody, Box, VStack, InputGroup, Input, Textarea } from '@chakra-ui/react';
-import React, { useContext, useEffect, useState } from 'react';
-import { submitEnquiry } from './components/Post';
-import { Icon } from '@iconify/react/dist/iconify.js';
+import CustomButton from "@/lib/components/CustomButton";
+import FadeIn from "@/lib/components/FadeIn";
+import { ActiveRouteContext } from "@/lib/hooks/activeRouteContext";
+import { primary, secondary } from "@/lib/styles/constants";
+import {
+  useToast,
+  Center,
+  Card,
+  useColorModeValue,
+  Text,
+  Heading,
+  CardBody,
+  Box,
+  VStack,
+  InputGroup,
+  Input,
+  Textarea,
+} from "@chakra-ui/react";
+import React, { useContext, useEffect, useState } from "react";
+import { submitEnquiry } from "./components/Post";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import { useRouter } from "next/navigation";
 
-interface MakeEnquiryProps {
-}
+interface MakeEnquiryProps {}
 
 const MakeEnquiry: React.FC<MakeEnquiryProps> = () => {
-    const { changeActiveRoute } = useContext(ActiveRouteContext);
+  const { changeActiveRoute } = useContext(ActiveRouteContext);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [enquiry, setEnquiry] = useState("");
+  const router = useRouter();
 
   useEffect(() => {
     localStorage.setItem("route", "Make Enquiry");
@@ -32,20 +46,21 @@ const MakeEnquiry: React.FC<MakeEnquiryProps> = () => {
     duration: 3000,
     isClosable: true,
   });
-  const formSuccessToast = useToast({
+  /*const formSuccessToast = useToast({
     title: "Success.",
     description: "We will be in touch with you very soon.",
     status: "success",
     duration: 3000,
     isClosable: true,
-  });
+  });*/
   const handleSubmit = async (event: any) => {
     if (name == "" || email == "" || subject == "" || enquiry == "") {
       formErrorToast();
       return;
     }
     submitEnquiry(name, email, subject, enquiry);
-    formSuccessToast();
+    //formSuccessToast();
+    router.push("/enquiry-success");
     event.preventDefault();
     event.target.reset();
   };
@@ -59,7 +74,7 @@ const MakeEnquiry: React.FC<MakeEnquiryProps> = () => {
             border={useColorModeValue("", "#474f5e 2px solid")}
             width={{ base: 300, sm: 300, md: 450, lg: 600 }}
           >
-            <Center pt={"20px"} >
+            <Center pt={"20px"}>
               <Heading size="md" pl={2}>
                 Make Enquiry
               </Heading>
